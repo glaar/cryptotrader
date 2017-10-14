@@ -2,7 +2,7 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const MyAwesomeReactComponent = () => (
-  <RaisedButton label="BestButton" />
+  <RaisedButton label="I am in layout" />
 );
 
 export default MyAwesomeReactComponent;
