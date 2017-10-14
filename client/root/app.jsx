@@ -11,7 +11,7 @@ class App extends Component {
         return (
             <div>
                 <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-                    <AppBar title="My AppBar"/>
+                    <AppBar title="Cryptotrader"/>
                 </MuiThemeProvider>
                 <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
                     <MyAwesomeReactComponent/>
