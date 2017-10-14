@@ -15,6 +15,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
+import { Link } from 'react-router-dom'
+
 
 const style = {
     paper: {
@@ -33,14 +35,14 @@ const Sidemenu = () => (
         <div>
             <Paper style={style.paper}>
                 <Menu>
-                    <MenuItem primaryText="Autotrade" leftIcon={<RemoveRedEye />} />
-                    <MenuItem primaryText="Wallet" leftIcon={<PersonAdd />} />
-                    <MenuItem primaryText="Market" leftIcon={<ContentLink />} />
+                    <MenuItem primaryText="Autotrade" containerElement={<Link to="/api/autotrade" />} leftIcon={<RemoveRedEye />} />
+                    <MenuItem primaryText="Wallet" containerElement={<Link to="/api/wallet" />} leftIcon={<PersonAdd />} />
+                    <MenuItem primaryText="Markets" containerElement={<Link to="/api/markets" />} leftIcon={<ContentLink />} />
                     <Divider />
-                    <MenuItem primaryText="Orders" leftIcon={<ContentCopy />} />
-                    <MenuItem primaryText="Settings" leftIcon={<Download />} />
+                    <MenuItem primaryText="Orders" containerElement={<Link to="/api/orders" />} leftIcon={<ContentCopy />} />
+                    <MenuItem primaryText="Settings" containerElement={<Link to="/api/settings" />} leftIcon={<Download />} />
                     <Divider />
-                    <MenuItem primaryText="Log out" leftIcon={<Delete />} />
+                    <MenuItem primaryText="Log out" containerElement={<Link to="/api/logout" />} leftIcon={<Delete />} />
                 </Menu>
             </Paper>
         </div>
