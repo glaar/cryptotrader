@@ -6,6 +6,8 @@ import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 
+require('../../assets/css/main.css');
+
 class App extends Component {
     render() {
         return (
