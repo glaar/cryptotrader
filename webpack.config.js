@@ -1,6 +1,6 @@
-var path = require("path")
-var webpack = require('webpack')
-var BundleTracker = require('webpack-bundle-tracker')
+var path = require("path");
+var webpack = require('webpack');
+var BundleTracker = require('webpack-bundle-tracker');
 
 module.exports = {
   context: __dirname,
@@ -18,8 +18,12 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader'}, // to transform JSX into JS
-    ],
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {presets:['es2015', 'react']}}
+    ]
   },
 
   resolve: {
