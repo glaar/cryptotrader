@@ -1,28 +1,30 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Sidemenu from './layout/Sidemenu';
-import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import AppBar from 'material-ui/AppBar';
+import Topbar from './layout/Topbar';
 
 require('../../assets/css/main.css');
+
+
 
 class App extends Component {
     render() {
         return (
             <div>
-                <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-                    <AppBar title="Cryptotrader"/>
-                </MuiThemeProvider>
-                <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-                    <Sidemenu/>
-                </MuiThemeProvider>
-
+                <div>
+                    <Topbar/>
+                </div>
+                <div>
+                    <Sidemenu />
+                </div>
+                <div id="container">
+                   <p>container</p>
+                </div>
             </div>
         )
     }
 }
+
 
 ReactDOM.render(
     <App />,

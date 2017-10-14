@@ -3,7 +3,10 @@ body {
 }
 
 
-.content{
+#container{
+    width: 500px;
+    height:
+    background-color: aquamarine;
 
 
 }
