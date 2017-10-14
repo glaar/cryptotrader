@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MyAwesomeReactComponent from './layout/MyAwesomeReactComponent';
+import Sidemenu from './layout/Sidemenu';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
@@ -14,7 +14,7 @@ class App extends Component {
                     <AppBar title="Cryptotrader"/>
                 </MuiThemeProvider>
                 <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-                    <MyAwesomeReactComponent/>
+                    <Sidemenu/>
                 </MuiThemeProvider>
 
             </div>
