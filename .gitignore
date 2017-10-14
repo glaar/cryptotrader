@@ -2,5 +2,5 @@
 .gitignore
 .idea/
 db.sqlite3
-node_modules/
-assets/bundles/
+/node_modules/
+/assets/bundles/
