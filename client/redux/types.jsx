@@ -1,3 +1,1 @@
-/**
- * Created by glaar on 15.10.2017.
- */
+export const GET_MARKETS = 'GET_MARKETS';
