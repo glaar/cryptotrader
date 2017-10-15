@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './redux/reducers/store';
 
 import Topbar from './layout/Topbar';
 import Sidemenu from './layout/Sidemenu';
@@ -66,7 +68,9 @@ const App = () => (
 
 
 ReactDOM.render((
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>
 ), document.getElementById('app'));
