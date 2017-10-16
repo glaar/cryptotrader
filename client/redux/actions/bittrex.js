@@ -35,10 +35,9 @@ export function getBalances () {
             }
         })
             .then(function (response) {
-                console.log(response);
                 dispatch({
                     type: GET_BALANCES,
-                    balances: response
+                    balances: response.data.message
                 });
             })
     }

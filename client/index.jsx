@@ -7,6 +7,7 @@ import Topbar from './layout/Topbar';
 import Sidemenu from './layout/Sidemenu';
 
 import Markets from './markets/markets';
+import Wallet from './wallet/wallet';
 
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
@@ -22,11 +23,6 @@ const Home = () => (
 const Autotrade = () => (
     <div>
         <h1>Autotrade</h1>
-    </div>
-);
-const Wallet = () => (
-    <div>
-        <h1>Wallet</h1>
     </div>
 );
 
@@ -45,7 +41,7 @@ const Settings = () => (
 const Main = () => (
     <main>
         <Switch>
-            <Route exact path='/api' component={Home}/>
+            <Route exact path='/api' component={Wallet}/>
             <Route path='/api/autotrade' component={Autotrade}/>
             <Route path='/api/wallet' component={Wallet}/>
             <Route path='/api/markets' component={Markets}/>

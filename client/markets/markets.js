@@ -1,13 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getMarkets, getBalances } from '../redux/actions/bittrex';
+import { getMarkets } from '../redux/actions/bittrex';
 
 
 class Markets extends React.Component {
 
     componentDidMount(){
         this.props.getMarkets();
-        this.props.getBalances();
     }
 
 
@@ -33,7 +32,6 @@ const mapStateToProps = state => {
       high: state.bittrex.high,
       low: state.bittrex.low,
       volume: state.bittrex.volume,
-      balances: state.bittrex.balances
   }
 };
 
@@ -41,7 +39,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
       getMarkets: () => dispatch(getMarkets()),
-      getBalances: () => dispatch(getBalances())
     }
 };
 
