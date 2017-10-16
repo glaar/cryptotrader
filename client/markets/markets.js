@@ -1,20 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getMarkets } from '../redux/actions/bittrex';
+import { getMarkets, getBalances } from '../redux/actions/bittrex';
 
 
 class Markets extends React.Component {
 
     componentDidMount(){
         this.props.getMarkets();
+        this.props.getBalances();
     }
 
 
     render() {
         return (
             <div>
-                <h1>This is Markets</h1>
-                <p>{this.props.markets}</p>
+                <h1>{this.props.market}</h1>
+                <ul>
+                    <li>{this.props.high} BTC</li>
+                    <li>{this.props.low} BTC</li>
+                    <li>{this.props.volume} BTC</li>
+                </ul>
             </div>
         );
     }
@@ -24,14 +29,19 @@ class Markets extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    markets: state.bittrex.markets
+      market: state.bittrex.markets,
+      high: state.bittrex.high,
+      low: state.bittrex.low,
+      volume: state.bittrex.volume,
+      balances: state.bittrex.balances
   }
 };
 
 
 const mapDispatchToProps = dispatch => {
   return {
-      getMarkets: () => dispatch(getMarkets())
+      getMarkets: () => dispatch(getMarkets()),
+      getBalances: () => dispatch(getBalances())
     }
 };
 

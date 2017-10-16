@@ -12,7 +12,7 @@ import Delete from 'material-ui/svg-icons/action/delete';
 
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import { Link } from 'react-router-dom'
@@ -31,7 +31,7 @@ const style = {
 };
 
 const Sidemenu = () => (
-    <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+    <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
         <div>
             <Paper style={style.paper}>
                 <Menu>
