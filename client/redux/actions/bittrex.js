@@ -27,18 +27,10 @@ export function getMarkets () {
 
 export function getBalances () {
     return dispatch => {
-        axios.get('https://bittrex.com/api/v1.1/account/getbalances?apikey=93cf695f625043d2a890206307bd07b4', {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-type':'application/json',
-                'Accept':'application/json',
-            }
-        })
-            .then(function (response) {
-                dispatch({
-                    type: GET_BALANCES,
-                    balances: response.data.message
-                });
-            })
+        const data = {
+            type: GET_BALANCES,
+            balances: "nothing"
+        };
+        dispatch(data)
     }
 }
