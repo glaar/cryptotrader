@@ -2,11 +2,7 @@ from django.shortcuts import render
 from bittrex import Bittrex
 
 
-my_bittrex = Bittrex(None, None, api_version=API_V2_0)  # or defaulting to v1.1 as Bittrex(None, None)
-my_bittrex.get_markets()
-
-print(my_bittrex)
-
+API = Bittrex(None, None)  # or defaulting to v1.1 as Bittrex(None, None)
 
 import requests
 import json
@@ -23,5 +19,5 @@ def index(request):
 
 def test(request):
 
-    context = {'wallet': '100'}
+    context = API.get_ticker('BTC-NEO')
     return render(request, 'api/test.html', context)
