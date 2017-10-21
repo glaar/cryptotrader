@@ -18,6 +18,5 @@ def index(request):
 
 
 def test(request):
-
     context = API.get_ticker('BTC-NEO')
     return render(request, 'api/test.html', context)
