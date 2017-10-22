@@ -108,6 +108,7 @@ pkginfo==1.4.1
 ply==3.10
 prompt-toolkit==1.0.15
 psutil==5.2.2
+psycopg2==2.7.3.1
 ptyprocess==0.5.2
 py==1.4.34
 pyasn1==0.2.3
@@ -122,6 +123,7 @@ pylint==1.7.2
 pyOpenSSL==17.0.0
 pyparsing==2.2.0
 pytest==3.2.1
+python-bittrex==0.1.4
 python-dateutil==2.6.1
 pytz==2017.2
 PyWavelets==0.5.2

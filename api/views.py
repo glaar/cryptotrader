@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from bittrex import Bittrex
 
-
-API = Bittrex(None, None)  # or defaulting to v1.1 as Bittrex(None, None)
-
 import requests
 import json
+import os
+
+API_KEY = os.environ['API_KEY']
+API_SECRET = os.environ['API_SECRET']
+
+API = Bittrex(API_KEY, API_SECRET)  # or defaulting to v1.1 as Bittrex(None, None)
 
 
 def index(request):
@@ -13,10 +16,10 @@ def index(request):
     jdata = json.loads(response.content)
     context = jdata['result'][0]
     print(jdata['result'][0]['MarketName'])
-
     return render(request, 'api/index.html', context)
 
 
 def test(request):
-    context = API.get_ticker('BTC-NEO')
+    context = API.get_balance('ETH')
+    print(context)
     return render(request, 'api/test.html', context)
