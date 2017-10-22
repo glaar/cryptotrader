@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from bittrex import Bittrex
+from bittrex import *
 
 import requests
 import json
@@ -8,7 +8,8 @@ import os
 API_KEY = os.environ['API_KEY']
 API_SECRET = os.environ['API_SECRET']
 
-API = Bittrex(API_KEY, API_SECRET)  # or defaulting to v1.1 as Bittrex(None, None)
+
+API = Bittrex(API_KEY, API_SECRET, api_version=API_V2_0)  # or defaulting to v1.1 as Bittrex(None, None)
 
 
 def index(request):
