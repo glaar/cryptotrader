@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from bittrex import *
 
+from .models import Wallet
+
 import requests
 import json
 import os
@@ -15,11 +17,14 @@ def index(request):
     response = requests.get('https://bittrex.com/api/v1.1/public/getmarketsummary?market=btc-neo')
     jdata = json.loads(response.content)
     context = jdata['result'][0]
-    print(jdata['result'][0]['MarketName'])
+    print(context['MarketName'])
     return render(request, 'api/index.html', context)
 
 
 def test(request):
-    context = API.get_balance('ETH')
-    print(context)
-    return render(request, 'api/test.html', context)
+    context = API.get_balance('BTC')
+    results = context['result']
+
+    wallet = Wallet(currency=results['Currency'], balance=results['Balance'], available=results['Available'])
+    wallet.save()
+    return render(request, 'api/test.html', context['result'])
