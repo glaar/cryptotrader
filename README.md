@@ -1,5 +1,5 @@
 # cryptotrader
-Bittrextrader with Django backend
+Cryptotrader[Bittrex] with Django and React
 
 www.bittrex.com
 
