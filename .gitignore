@@ -6,6 +6,6 @@ db.sqlite3
 /assets/bundles/
 /__pychache__/
 /venv/
-/api/__pycache/
+/api/__pycache__/
 
 secrets.sh
