@@ -4,7 +4,7 @@
 db.sqlite3
 /node_modules/
 /assets/bundles/
-api/__pychache__/
+/__pychache__/
 /venv/
 
 secrets.sh
