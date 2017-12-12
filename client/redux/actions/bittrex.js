@@ -6,7 +6,7 @@ import { GET_MARKETS, GET_BALANCES } from '../types';
 export function getMarkets () {
 
     return dispatch => {
-        axios.get('https://bittrex.com/api/v1.1/public/getmarketsummary?market=btc-neo', {
+        axios.get('https://bittrex.com/api/v1.1/public/getmarketsummary?market=btc-eth', {
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Content-type':'application/json',
