@@ -6,6 +6,8 @@ import store from './redux/store';
 import Topbar from './layout/Topbar';
 import Sidemenu from './layout/Sidemenu';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import Markets from './markets/markets';
 import Wallet from './wallet/wallet';
 
@@ -53,13 +55,15 @@ const Main = () => (
 
 
 const App = () => (
-    <div>
-        <Topbar />
-        <Sidemenu />
-        <div id="container">
-            <Main />
+    <MuiThemeProvider>
+        <div>
+            <Topbar />
+            <Sidemenu />
+            <div id="container">
+                <Main />
+            </div>
         </div>
-    </div>
+    </MuiThemeProvider>
 );
 
 

@@ -1,4 +1,4 @@
-import { GET_MARKETS, GET_BALANCES } from '../types';
+import {GET_MARKETS, GET_BALANCES, DJANGO} from '../types';
 
 
 function bittrex (state = {}
@@ -19,7 +19,12 @@ function bittrex (state = {}
                     ...state,
                     balances: action.balances
                 });
-
+        case DJANGO:
+            return Object.assign({}, state,
+                {
+                    ...state,
+                    django: action.payload
+                });
         default:
             return state
     }

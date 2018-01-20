@@ -1,6 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getBalances } from '../redux/actions/bittrex';
+import { askDjango } from '../redux/actions/bittrex';
+
+import RaisedButton from 'material-ui/RaisedButton';
+
 
 
 class Wallet extends React.Component {
@@ -11,10 +15,12 @@ class Wallet extends React.Component {
 
 
     render() {
+        const { balances, askDjango } = this.props;
         return (
             <div>
                 <h1>Wallet</h1>
-                <p>{this.props.balances}</p>
+                <p>{balances}</p>
+                <RaisedButton label="Django!" onClick={askDjango} />
             </div>
         );
     }
@@ -31,7 +37,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      getBalances: () => dispatch(getBalances())
+      getBalances: () => dispatch(getBalances()),
+      askDjango: () => dispatch(askDjango())
     }
 };
 

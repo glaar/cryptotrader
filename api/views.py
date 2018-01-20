@@ -24,6 +24,7 @@ def index(request):
 def test(request):
     context = API.get_balance('BTC')
     results = context['result']
+    print(results)
 
     wallet = Wallet(currency=results['Currency'], balance=results['Balance'], available=results['Available'])
     wallet.save()

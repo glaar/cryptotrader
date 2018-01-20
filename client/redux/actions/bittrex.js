@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-import { GET_MARKETS, GET_BALANCES } from '../types';
+import {GET_MARKETS, GET_BALANCES, DJANGO} from '../types';
 
 
 export function getMarkets () {
@@ -33,4 +32,21 @@ export function getBalances () {
         };
         dispatch(data)
     }
+}
+
+export function askDjango() {
+    return dispatch => {
+        axios.get('https://jsonplaceholder.typicode.com/posts/1')
+            .then(response => {
+                dispatch(askDjangoAsync(response.data.id));
+            });
+    }
+}
+
+function askDjangoAsync (data) {
+    return {
+        type: DJANGO,
+        payload: data
+    }
+
 }
