@@ -23,7 +23,7 @@ function bittrex (state = {}
             return Object.assign({}, state,
                 {
                     ...state,
-                    django: action.payload
+                    bittrexResults: action.payload
                 });
         default:
             return state

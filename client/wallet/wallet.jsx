@@ -1,47 +1,40 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { getBalances } from '../redux/actions/bittrex';
-import { askDjango } from '../redux/actions/bittrex';
-
-import RaisedButton from 'material-ui/RaisedButton';
-
+import React from "react";
+import {connect} from "react-redux";
+import {askDjango} from "../redux/actions/bittrex";
 
 
 class Wallet extends React.Component {
 
     componentDidMount(){
-        this.props.getBalances();
+        this.props.askDjango();
     }
 
 
     render() {
-        const { balances, askDjango } = this.props;
+        const {bittrexResults} = this.props;
         return (
             <div>
                 <h1>Wallet</h1>
-                <p>{balances}</p>
-                <RaisedButton label="Django!" onClick={askDjango} />
+                {console.log(bittrexResults)}
+                <p>BTC: { bittrexResults && bittrexResults.Balance }</p> {/*checks if bittrexResulst have been loaded before, if not do not render this line --!>*/}
             </div>
         );
     }
 }
 
 
-
 const mapStateToProps = state => {
   return {
-      balances: state.bittrex.balances
+      bittrexResults: state.bittrex.bittrexResults
   }
 };
 
 
 const mapDispatchToProps = dispatch => {
   return {
-      getBalances: () => dispatch(getBalances()),
       askDjango: () => dispatch(askDjango())
     }
 };
-
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wallet);

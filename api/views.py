@@ -1,11 +1,12 @@
-from django.shortcuts import render
+import os
+
 from bittrex import *
+from django.shortcuts import render
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 from .models import Wallet
-
-import requests
-import json
-import os
 
 API_KEY = os.environ['API_KEY']
 API_SECRET = os.environ['API_SECRET']
@@ -29,3 +30,15 @@ def test(request):
     wallet = Wallet(currency=results['Currency'], balance=results['Balance'], available=results['Available'])
     wallet.save()
     return render(request, 'api/test.html', context['result'])
+
+
+
+class ThatApiView(APIView):
+    """
+    Documentation goes here
+    """
+    def get(self, request, format=None):
+        context = API.get_balance('BTC')
+        results = context['result']
+        return Response({'result': results})
+

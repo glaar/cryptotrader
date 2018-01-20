@@ -36,9 +36,9 @@ export function getBalances () {
 
 export function askDjango() {
     return dispatch => {
-        axios.get('https://jsonplaceholder.typicode.com/posts/1')
+        axios.get('/api/bittrex/')
             .then(response => {
-                dispatch(askDjangoAsync(response.data.id));
+                dispatch(askDjangoAsync(response.data.result));
             });
     }
 }
