@@ -17,12 +17,6 @@ function bittrex (state = {}
             return Object.assign({}, state,
                 {
                     ...state,
-                    balances: action.balances
-                });
-        case DJANGO:
-            return Object.assign({}, state,
-                {
-                    ...state,
                     bittrexResults: action.payload
                 });
         default:

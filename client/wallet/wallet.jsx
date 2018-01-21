@@ -1,12 +1,12 @@
 import React from "react";
 import {connect} from "react-redux";
-import {askDjango} from "../redux/actions/bittrex";
+import {getBalance} from "../redux/actions/bittrex";
 
 
 class Wallet extends React.Component {
 
     componentDidMount(){
-        this.props.askDjango();
+        this.props.getBalance();
     }
 
 
@@ -15,7 +15,6 @@ class Wallet extends React.Component {
         return (
             <div>
                 <h1>Wallet</h1>
-                {console.log(bittrexResults)}
                 <p>BTC: { bittrexResults && bittrexResults.Balance }</p> {/*checks if bittrexResulst have been loaded before, if not do not render this line --!>*/}
             </div>
         );
@@ -32,7 +31,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      askDjango: () => dispatch(askDjango())
+      getBalance: () => dispatch(getBalance())
     }
 };
 

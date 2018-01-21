@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {GET_MARKETS, GET_BALANCES, DJANGO} from '../types';
+import {GET_MARKETS, GET_BALANCES} from '../types';
 
 
 export function getMarkets () {
@@ -24,28 +24,19 @@ export function getMarkets () {
     }
 }
 
-export function getBalances () {
-    return dispatch => {
-        const data = {
-            type: GET_BALANCES,
-            balances: "nothing"
-        };
-        dispatch(data)
-    }
-}
 
-export function askDjango() {
+export function getBalance() {
     return dispatch => {
         axios.get('/api/bittrex/')
             .then(response => {
-                dispatch(askDjangoAsync(response.data.result));
+                dispatch(askBalanceAsync(response.data.result));
             });
     }
 }
 
-function askDjangoAsync (data) {
+function askBalanceAsync (data) {
     return {
-        type: DJANGO,
+        type: GET_BALANCES,
         payload: data
     }
 
