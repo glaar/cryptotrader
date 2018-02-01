@@ -15,6 +15,7 @@ class Wallet extends React.Component {
         return (
             <div>
                 <h1>Wallet</h1>
+                {console.log(bittrexResults)}
                 <p>BTC: { bittrexResults && bittrexResults.Balance }</p> {/*checks if bittrexResulst have been loaded before, if not do not render this line --!>*/}
             </div>
         );
