@@ -10,6 +10,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Markets from './markets/markets';
 import Wallet from './wallet/wallet';
+import Autotrade from './autotrade/autotrade';
 
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
@@ -22,11 +23,6 @@ const Home = () => (
   </div>
 );
 
-const Autotrade = () => (
-    <div>
-        <h1>Autotrade</h1>
-    </div>
-);
 
 const Orders= () => (
     <div>

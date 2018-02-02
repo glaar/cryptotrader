@@ -41,5 +41,7 @@
     "webpack": "^1.13.1",
     "webpack-bundle-tracker": "0.0.93"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-autocomplete": "^1.7.2"
+  }
 }
