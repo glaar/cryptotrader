@@ -38,7 +38,7 @@ const Settings = () => (
 const Main = () => (
     <main>
         <Switch>
-            <Route exact path='/api' component={Wallet}/>
+            <Route exact path='/' component={Home}/>
             <Route path='/api/autotrade' component={Autotrade}/>
             <Route path='/api/wallet' component={Wallet}/>
             <Route path='/api/orders' component={Orders}/>
