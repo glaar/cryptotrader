@@ -37,7 +37,6 @@ const Sidemenu = () => (
                 <Menu>
                     <MenuItem primaryText="Autotrade" containerElement={<Link to="/api/autotrade" />} leftIcon={<RemoveRedEye />} />
                     <MenuItem primaryText="Wallet" containerElement={<Link to="/api/wallet" />} leftIcon={<PersonAdd />} />
-                    <MenuItem primaryText="Markets" containerElement={<Link to="/api/markets" />} leftIcon={<ContentLink />} />
                     <Divider />
                     <MenuItem primaryText="Orders" containerElement={<Link to="/api/orders" />} leftIcon={<ContentCopy />} />
                     <MenuItem primaryText="Settings" containerElement={<Link to="/api/settings" />} leftIcon={<Download />} />

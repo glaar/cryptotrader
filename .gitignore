@@ -7,5 +7,5 @@ db.sqlite3
 /__pychache__/
 /venv/
 /api/__pycache__/
-webpack-stats.json
 secrets.sh
+/webpack-stats.json

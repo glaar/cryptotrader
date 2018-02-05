@@ -8,7 +8,6 @@ import Sidemenu from './layout/Sidemenu';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Markets from './markets/markets';
 import Wallet from './wallet/wallet';
 import Autotrade from './autotrade/autotrade';
 
@@ -42,7 +41,6 @@ const Main = () => (
             <Route exact path='/api' component={Wallet}/>
             <Route path='/api/autotrade' component={Autotrade}/>
             <Route path='/api/wallet' component={Wallet}/>
-            <Route path='/api/markets' component={Markets}/>
             <Route path='/api/orders' component={Orders}/>
             <Route path='/api/settings' component={Settings}/>
         </Switch>
