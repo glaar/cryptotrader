@@ -42,6 +42,8 @@
     "webpack-bundle-tracker": "0.0.93"
   },
   "dependencies": {
-    "react-autocomplete": "^1.7.2"
+    "react-autocomplete": "^1.7.2",
+    "react-bootstrap": "^0.32.1",
+    "url-loader": "^0.6.2"
   }
 }
