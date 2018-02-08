@@ -14,13 +14,11 @@ import Autotrade from './autotrade/autotrade';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import {ButtonToolbar, DropdownButton, MenuItem} from "react-bootstrap";
 
-require('../assets/css/main.css');
-
+require("../assets/css/main.css");
 
 const Home = () => (
   <div>
     <h1>Cryptotrader</h1>
-
       <ButtonToolbar>
           <DropdownButton
               bsStyle="default"
@@ -34,7 +32,6 @@ const Home = () => (
               <MenuItem eventKey="4">Separated link</MenuItem>
           </DropdownButton>
       </ButtonToolbar>
-
   </div>
 );
 

@@ -1,7 +1,9 @@
-@import url("bootstrap.min.css");
-
 body {
     background-color: #8bf7ff;
+}
+
+h1 {
+    font-size: 60px;
 }
 
 
