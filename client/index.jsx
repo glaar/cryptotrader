@@ -14,6 +14,7 @@ import Autotrade from './autotrade/autotrade';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import {ButtonToolbar, DropdownButton, MenuItem} from "react-bootstrap";
 
+//Import CSS
 require("../assets/css/main.css");
 
 const Home = () => (
