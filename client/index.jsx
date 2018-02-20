@@ -18,7 +18,7 @@ require("../assets/css/main.css");
 
 const Home = () => (
   <div>
-    <h1>Cryptotrader</h1>
+    <h1>HelloWorld</h1>
       <ButtonToolbar>
           <DropdownButton
               bsStyle="default"
