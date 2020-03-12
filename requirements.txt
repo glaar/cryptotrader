@@ -107,7 +107,7 @@ pipenv==8.2.7
 pkginfo==1.4.1
 ply==3.10
 prompt-toolkit==1.0.15
-psutil==5.2.2
+psutil==5.6.6
 psycopg2==2.7.3.1
 ptyprocess==0.5.2
 py==1.4.34
