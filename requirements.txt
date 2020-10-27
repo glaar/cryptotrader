@@ -28,7 +28,7 @@ conda==4.3.27
 conda-build==3.0.19
 conda-verify==2.0.0
 configobj==5.0.6
-cryptography==1.8.1
+cryptography==3.2
 cycler==0.10.0
 Cython==0.26
 cytoolz==0.8.2
